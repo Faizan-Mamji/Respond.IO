@@ -30,10 +30,10 @@ test.describe("UI Test Automation For iprice.my website", () => {
         console.log('Scenario-1 executes!')
         categorySelection = new CategorySelection(page);
         await commonMethods.navigation_Page(businessHelper.ConfigData().laptopsCategory)
+        page.waitForSelector("//div[@class='m lN v a5 kL rG kF']")
         await categorySelection.click_Category_Icon()
         await categorySelection.select_Category()
-        await categorySelection.click_Category_Icon()
-        await categorySelection.close_Category_Icon()
+        await categorySelection.click_Category_Icon_Again()
         getUrl = page.url()
         console.log(page.url())
         if (getUrl.includes('dell')) {

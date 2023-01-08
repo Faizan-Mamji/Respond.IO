@@ -15,6 +15,10 @@ let postPayload = {
 test.describe("Test Playwright With Dummy Register Testing", () => {
     test("Positive: Flow without any change", async ({ request, baseURL }) => {
         const response = await request.post(`${baseURL}booking`, {
+            headers:
+            {
+                'Content-Type': 'application/json'
+            },
             data: JSON.stringify(postPayload)
         });
 
@@ -28,6 +32,10 @@ test.describe("Test Playwright With Dummy Register Testing", () => {
         postPayload.lastname = ""
 
         const response = await request.post(`${baseURL}booking`, {
+            headers:
+            {
+                'Content-Type': 'application/json'
+            },
             data: JSON.stringify(postPayload)
         });
 
@@ -40,6 +48,10 @@ test.describe("Test Playwright With Dummy Register Testing", () => {
         postPayload.totalprice = 123.60
 
         const response = await request.post(`${baseURL}booking`, {
+            headers:
+            {
+                'Content-Type': 'application/json'
+            },
             data: JSON.stringify(postPayload)
         });
 
@@ -53,6 +65,10 @@ test.describe("Test Playwright With Dummy Register Testing", () => {
         postPayload.bookingdates.checkout = "123433"
 
         const response = await request.post(`${baseURL}booking`, {
+            headers:
+            {
+                'Content-Type': 'application/json'
+            },
             data: JSON.stringify(postPayload)
         });
 
@@ -65,6 +81,10 @@ test.describe("Test Playwright With Dummy Register Testing", () => {
         postPayload.totalprice = -120.223;
 
         const response = await request.post(`${baseURL}booking`, {
+            headers:
+            {
+                'Content-Type': 'application/json'
+            },
             data: JSON.stringify(postPayload)
         });
 
@@ -77,6 +97,10 @@ test.describe("Test Playwright With Dummy Register Testing", () => {
         postPayload.depositpaid = false;
 
         const response = await request.post(`${baseURL}booking`, {
+            headers:
+            {
+                'Content-Type': 'application/json'
+            },
             data: JSON.stringify(postPayload)
         });
 

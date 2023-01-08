@@ -13,11 +13,15 @@ class CategorySelection {
     }
 
     async click_Category_Icon() {
-        await commonMethods.click_Element("//label[@role='button']/i[@class='sprite-icons cI pp ip p eD sU']")
+        await commonMethods.click_Element("//div[@class='m lN v a5 kL rG kF']")
     }
 
     async select_Category() {
         await commonMethods.click_Element("(//span[@data-vars-lb='Dell'])[1]")
+    }
+
+    async click_Category_Icon_Again(){
+        await commonMethods.click_Element("//div[@id='open-filter-panel']")
     }
 
     async close_Category_Icon() {
